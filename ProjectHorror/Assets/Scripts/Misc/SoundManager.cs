@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static void PlaySound(AudioSource audioSource)
     {
-        
+        audioSource.Play();
     }
 
-    // Update is called once per frame
-    void Update()
+    public static void PauseSound(AudioSource audioSource)
     {
-        
+        audioSource.Pause();
+    }
+
+    public static void UnPauseSound(AudioSource audioSource)
+    {
+        audioSource.UnPause();
+    }
+
+    public static void StopSound(AudioSource audioSource)
+    {
+        audioSource.Stop();
     }
 }
