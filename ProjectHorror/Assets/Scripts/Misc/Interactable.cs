@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Animator ac;
+
+    private void Start()
     {
-        
+        ac = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Use()
     {
-        
+        if(ac.GetBool("Open") == true)
+        {
+            ac.SetBool("Open", false);
+        }
+        else
+        {
+            ac.SetBool("Open", true);
+        }
     }
 }
