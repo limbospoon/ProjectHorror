@@ -4,22 +4,8 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-    public Animator ac;
-
-    private void Start()
+    public virtual void Use()
     {
-        ac = GetComponent<Animator>();
-    }
-
-    public void Use()
-    {
-        if(ac.GetBool("Open") == true)
-        {
-            ac.SetBool("Open", false);
-        }
-        else
-        {
-            ac.SetBool("Open", true);
-        }
+        
     }
 }
