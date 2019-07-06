@@ -5,6 +5,8 @@ using UnityEngine;
 public class HorrorCharacter : MonoBehaviour
 {
     public GameObject interactable;
+    public float interactRange = 10.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +36,7 @@ public class HorrorCharacter : MonoBehaviour
         Ray ray = new Ray(rayDirection, Camera.main.transform.forward);
         RaycastHit hit;
 
-        if(Physics.Raycast(ray, out hit, 2.0f))
+        if(Physics.Raycast(ray, out hit, interactRange))
         {
             if(hit.collider.GetComponent<Interactable>())
             {
