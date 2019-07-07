@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class Equipable : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject model;
 
-    // Update is called once per frame
-    void Update()
+    public void Equip(Transform attachPoint)
     {
-        
+        GameObject go = Instantiate(model, Vector3.zero, Quaternion.identity);
+        go.transform.parent = attachPoint;
+        go.transform.position = attachPoint.position;
     }
 }

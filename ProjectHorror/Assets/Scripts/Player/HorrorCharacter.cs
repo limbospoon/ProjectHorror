@@ -6,8 +6,10 @@ public class HorrorCharacter : MonoBehaviour
 {
     public GameObject interactable;
     public float interactRange = 10.0f;
+    public Transform attachPoint;
 
     private InventoryManager inventoryManager;
+    public Equipable equipable;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +24,15 @@ public class HorrorCharacter : MonoBehaviour
         inventoryManager = GetComponent<InventoryManager>();
     }
 
+    void EquipItem()
+    {
+        if (inventoryManager.inventory[0].canEquip)
+        {
+            equipable = inventoryManager.inventory[0].equipable;
+            equipable.Equip(attachPoint);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -31,6 +42,10 @@ public class HorrorCharacter : MonoBehaviour
             {
                 interactable.GetComponent<Interactable>().Use();
             }
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            EquipItem();
         }
     }
 
