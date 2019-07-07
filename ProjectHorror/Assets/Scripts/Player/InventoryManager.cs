@@ -6,8 +6,8 @@ public class InventoryManager : MonoBehaviour
 {
     public List<InventoryItem> inventory = new List<InventoryItem>();
 
-    public void Add()
+    public void Add(InventoryItem item)
     {
-
+        inventory.Add(item);
     }
 }

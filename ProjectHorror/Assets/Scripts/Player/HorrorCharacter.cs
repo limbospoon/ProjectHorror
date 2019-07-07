@@ -7,10 +7,19 @@ public class HorrorCharacter : MonoBehaviour
     public GameObject interactable;
     public float interactRange = 10.0f;
 
+    private InventoryManager inventoryManager;
+
     // Start is called before the first frame update
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        if(!GetComponent<InventoryManager>())
+        {
+            Debug.LogError("!!!No inventory manager found pls add");
+            return;
+        }
+
+        inventoryManager = GetComponent<InventoryManager>();
     }
 
     // Update is called once per frame
@@ -23,6 +32,11 @@ public class HorrorCharacter : MonoBehaviour
                 interactable.GetComponent<Interactable>().Use();
             }
         }
+    }
+
+    public void PickupItem(InventoryItem item)
+    {
+        inventoryManager.Add(item);
     }
 
     private void FixedUpdate()

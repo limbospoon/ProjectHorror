@@ -2,17 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pickup : MonoBehaviour
+public class Pickup : Interactable
 {
-    // Start is called before the first frame update
-    void Start()
+    public InventoryItem item;
+
+    public override void Use()
     {
-        
+        HorrorCharacter hc = GameObject.Find("Player").GetComponent<HorrorCharacter>();
+        PickupItem(hc);
     }
 
-    // Update is called once per frame
-    void Update()
+    void PickupItem(HorrorCharacter horrorCharacter)
     {
-        
+        horrorCharacter.PickupItem(item);
+        Destroy(this.gameObject, 0.05f);
     }
 }
