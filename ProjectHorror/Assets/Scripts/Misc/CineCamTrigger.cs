@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class CineCamTrigger : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject cam;
+    public float duration = 3.0f;
+
+    private GameObject playerRef;
+
+    private void Start()
     {
-        
+        cam.GetComponent<CinematicCam>().Setup(this, duration);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        //TODO: change to check if its the player
+        other.gameObject.SetActive(false);
+        playerRef = other.gameObject;
+        cam.GetComponent<Camera>().enabled = true;
+    }
+
+    public void TurnOffCam()
+    {
+        playerRef.SetActive(true);
+        this.gameObject.SetActive(false);
     }
 }

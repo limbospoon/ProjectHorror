@@ -4,27 +4,26 @@ using UnityEngine;
 
 public class CinematicCam : MonoBehaviour
 {
-    public Camera cam;
-    public float duration = 3.0f;
+    private CineCamTrigger camTrigger;
+    private float duration;
 
-    private GameObject playerRef;
-
-    private void OnTriggerEnter(Collider other)
+    public void Setup(CineCamTrigger trigger, float dur)
     {
-        //TODO: change to check if its the player
-        other.gameObject.SetActive(false);
-        playerRef = other.gameObject;
-        cam.enabled = true;
+        camTrigger = trigger;
+        duration = dur;
     }
 
-    private void CineCam()
+    private void Update()
     {
-        while (duration > 0.0f)
+        if(GetComponent<Camera>().enabled)
         {
             duration -= 1.0f * Time.deltaTime;
-        }
-        playerRef.SetActive(true);
-        cam.enabled = false;
-        this.gameObject.SetActive(false);
+
+            if (duration <= 0.0f)
+            {
+                camTrigger.TurnOffCam();
+                this.gameObject.SetActive(false);
+            }
+        } 
     }
 }
