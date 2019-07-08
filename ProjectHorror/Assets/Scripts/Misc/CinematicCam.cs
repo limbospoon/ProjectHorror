@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class CinematicCam : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Camera cam;
+    public float duration = 3.0f;
+
+    private GameObject playerRef;
+
+    private void OnTriggerEnter(Collider other)
     {
-        
+        //TODO: change to check if its the player
+        other.gameObject.SetActive(false);
+        playerRef = other.gameObject;
+        cam.enabled = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void CineCam()
     {
-        
+        while (duration > 0.0f)
+        {
+            duration -= 1.0f * Time.deltaTime;
+        }
+        playerRef.SetActive(true);
+        cam.enabled = false;
+        this.gameObject.SetActive(false);
     }
 }
