@@ -10,6 +10,7 @@ public class Pickup : Interactable
     {
         HorrorCharacter hc = GameObject.Find("Player").GetComponent<HorrorCharacter>();
         PickupItem(hc);
+        
     }
 
     void PickupItem(HorrorCharacter horrorCharacter)

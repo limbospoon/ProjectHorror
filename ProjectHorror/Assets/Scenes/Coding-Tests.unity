@@ -8232,15 +8232,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8991348280809246815, guid: 69297bbf6006ba84d90a4b6c69bc8fb8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4998938858246894790, guid: 69297bbf6006ba84d90a4b6c69bc8fb8,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8991348280809246815, guid: 69297bbf6006ba84d90a4b6c69bc8fb8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69297bbf6006ba84d90a4b6c69bc8fb8, type: 3}
@@ -93314,6 +93314,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FMVCam
       objectReference: {fileID: 0}
+    - target: {fileID: 4107609058007767604, guid: 8f3b573f4498f68448d6dfcf0adb567a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4107609058007767607, guid: 8f3b573f4498f68448d6dfcf0adb567a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -93449,6 +93454,11 @@ PrefabInstance:
       propertyPath: item.canEquip
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3107672642669502485, guid: 900a2bdef3163ad4599d1e52e4c690df,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 900a2bdef3163ad4599d1e52e4c690df, type: 3}
 --- !u!1001 &7414974370109629538
@@ -93462,6 +93472,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: VidPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 7414974371012534326, guid: 9035310cb7676164db2681f100941f3b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7414974371012534324, guid: 9035310cb7676164db2681f100941f3b,
         type: 3}
@@ -93545,7 +93560,7 @@ PrefabInstance:
     - target: {fileID: 7479262612598255831, guid: 2dfd58108c0906d49b450863d19eea81,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7479262612598255828, guid: 2dfd58108c0906d49b450863d19eea81,
         type: 3}
