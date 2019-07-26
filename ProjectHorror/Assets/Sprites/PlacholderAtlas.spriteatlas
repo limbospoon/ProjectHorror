@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PlacholderAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 2
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 9fde5ca55f8a36441a22fb6ffcb1207c, type: 3}
+    totalSpriteSurfaceArea: 1792413
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 8461783844000317231, guid: 9fde5ca55f8a36441a22fb6ffcb1207c, type: 3}
+  - {fileID: -3329588954896842719, guid: 9fde5ca55f8a36441a22fb6ffcb1207c, type: 3}
+  - {fileID: 4009674341837543964, guid: 9fde5ca55f8a36441a22fb6ffcb1207c, type: 3}
+  - {fileID: 2493644530629053614, guid: 9fde5ca55f8a36441a22fb6ffcb1207c, type: 3}
+  - {fileID: 3602721877731795361, guid: 9fde5ca55f8a36441a22fb6ffcb1207c, type: 3}
+  - {fileID: 6637509970570205595, guid: 9fde5ca55f8a36441a22fb6ffcb1207c, type: 3}
+  - {fileID: 6464864104737599965, guid: 9fde5ca55f8a36441a22fb6ffcb1207c, type: 3}
+  - {fileID: 8948456485811751291, guid: 9fde5ca55f8a36441a22fb6ffcb1207c, type: 3}
+  - {fileID: 8186005084143120320, guid: 9fde5ca55f8a36441a22fb6ffcb1207c, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - SpriteHolder_8
+  - SpriteHolder_7
+  - SpriteHolder_6
+  - SpriteHolder_5
+  - SpriteHolder_4
+  - SpriteHolder_3
+  - SpriteHolder_2
+  - SpriteHolder_1
+  - SpriteHolder_0
+  m_Tag: PlacholderAtlas
+  m_IsVariant: 0

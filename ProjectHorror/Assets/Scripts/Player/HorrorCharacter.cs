@@ -1,15 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.U2D;
 
 public class HorrorCharacter : MonoBehaviour
 {
     public GameObject interactable;
     public float interactRange = 10.0f;
     public Transform attachPoint;
+    public SpriteAtlas spriteAtlas;
+
 
     private InventoryManager inventoryManager;
-    public Equipable equipable;
+    private GameObject thirdPersonModel;
+    private Equipable equipable;
+    private Sprite[] sprites;
+    public SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
@@ -20,8 +26,13 @@ public class HorrorCharacter : MonoBehaviour
             Debug.LogError("!!!No inventory manager found pls add");
             return;
         }
-
         inventoryManager = GetComponent<InventoryManager>();
+
+        thirdPersonModel = transform.GetChild(1).gameObject;
+        spriteRenderer = thirdPersonModel.GetComponent<SpriteRenderer>();
+
+        sprites = new Sprite[spriteAtlas.spriteCount];
+        spriteAtlas.GetSprites(sprites);
     }
 
     void EquipItem()
