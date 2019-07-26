@@ -6,6 +6,7 @@ public class CineCamTrigger : MonoBehaviour
 {
     public GameObject cam;
     public float duration = 3.0f;
+    public int spriteIndex;
 
     private GameObject playerRef;
 
@@ -17,14 +18,17 @@ public class CineCamTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //TODO: change to check if its the player
-        other.gameObject.SetActive(false);
         playerRef = other.gameObject;
+        playerRef.GetComponent<HorrorCharacter>().ThirdPersonMode(spriteIndex);
+        playerRef.GetComponent<HorrorCharacter>().DisableControls();
         cam.GetComponent<Camera>().enabled = true;
     }
 
     public void TurnOffCam()
     {
         playerRef.SetActive(true);
+        playerRef.GetComponent<HorrorCharacter>().FirstPersonMode();
+        playerRef.GetComponent<HorrorCharacter>().EnableControls();
         this.gameObject.SetActive(false);
     }
 }
