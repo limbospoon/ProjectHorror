@@ -21,14 +21,17 @@ public class CineCamTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //TODO: change to check if its the player
-        playerRef = other.gameObject;
-        playerRef.GetComponent<HorrorCharacter>().ThirdPersonMode(spriteIndex);
-        playerRef.GetComponent<HorrorCharacter>().DisableControls();
-        cam.GetComponent<Camera>().enabled = true;
-
-        if(animate)
+        if(other.gameObject.tag == "Player")
         {
-            AnimateObject();
+            playerRef = other.gameObject;
+            playerRef.GetComponent<HorrorCharacter>().ThirdPersonMode(spriteIndex);
+            playerRef.GetComponent<HorrorCharacter>().DisableControls();
+            cam.GetComponent<Camera>().enabled = true;
+
+            if (animate)
+            {
+                AnimateObject();
+            }
         }
     }
 
