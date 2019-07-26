@@ -6,12 +6,15 @@ public class Door : Interactable
 {
     [Range(0.0f,1.0f)]
     public float openCloseSpeed = 1.0f;
+    public float closeDelay = 1.0f;
 
     public AudioClip[] audioClips = new AudioClip[2];
 
-
     private Animator animator;
     private AudioSource audioSource;
+    private bool bClosed = true;
+    private float MAXCLOSEDELAY;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,11 +32,21 @@ public class Door : Interactable
         audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         SetPlayBackSpeed();
+        MAXCLOSEDELAY = closeDelay;
+    }
+
+    private void Update()
+    {
+        if(!bClosed)
+        {
+            AutoClose();
+        }
     }
 
     public override void Use()
     {
         Open();
+        closeDelay = MAXCLOSEDELAY;
     }
 
     void SetPlayBackSpeed()
@@ -48,12 +61,25 @@ public class Door : Interactable
             audioSource.clip = audioClips[1];
             SoundManager.PlaySound(audioSource);
             animator.SetBool("Open", false);
+            bClosed = true;
         }
         else
         {
             audioSource.clip = audioClips[0];
             SoundManager.PlaySound(audioSource);
             animator.SetBool("Open", true);
+            bClosed = false;
+        }
+    }
+
+    void AutoClose()
+    {
+        closeDelay -= 1.0f * Time.deltaTime;
+
+        if(closeDelay <= 0.0f)
+        {
+            Open();
+            closeDelay = MAXCLOSEDELAY;
         }
     }
 }
