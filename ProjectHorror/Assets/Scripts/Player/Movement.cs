@@ -6,31 +6,40 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public float speed;
+    public float turnSpeed;
     public float gravity;
 
-    private Vector3 moveDir = Vector3.zero;
     private CharacterController cc;
+    private float turnAxis;
+    private Quaternion ogRot;
 
     // Start is called before the first frame update
     void Start()
     {
+        ogRot = transform.localRotation;
         cc = GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
-    void Update()
+    public void Move(Vector3 direction)
     {
         if(isGrounded())
         {
-            moveDir = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
-            moveDir = transform.TransformDirection(moveDir);
-            moveDir *= speed;
+            turnAxis += Input.GetAxisRaw("Horizontal") * turnSpeed;
 
+            turnAxis = AngleClamp.ClampAngle(turnAxis, -360.0f, 360.0f);
+
+            Quaternion xQuat = Quaternion.AngleAxis(turnAxis, Vector3.up);
+
+            transform.localRotation = ogRot * xQuat;
+
+            direction = transform.TransformDirection(direction);
+            direction *= speed;
         }
 
-        moveDir.y -= gravity * Time.deltaTime;
+        direction.y -= gravity * Time.deltaTime;
 
-        cc.Move(moveDir * Time.deltaTime);
+        cc.Move(direction * Time.deltaTime);
     }
 
     bool isGrounded()
@@ -52,4 +61,6 @@ public class Movement : MonoBehaviour
 
         return false;
     }
+
+
 }
