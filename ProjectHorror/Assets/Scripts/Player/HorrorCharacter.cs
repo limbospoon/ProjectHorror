@@ -8,7 +8,7 @@ using UnityEngine.U2D;
 [RequireComponent(typeof(CharacterController))]
 public class HorrorCharacter : MonoBehaviour
 {
-    public GameObject interactable;
+    public Interactable interactable;
     public Transform attachPoint;
 
     private Movement movement;
@@ -34,6 +34,17 @@ public class HorrorCharacter : MonoBehaviour
         {
             equipable = inventoryManager.inventory[0].equipable;
             equipable.Equip(attachPoint);
+        }
+    }
+
+    void Interact()
+    {
+        if(Input.GetKeyDown(KeyCode.F))
+        {
+            if(interactable != null)
+            {
+                interactable.Use();
+            }
         }
     }
 
