@@ -1,18 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryUI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject inventoryScreen;
 
-    // Update is called once per frame
-    void Update()
+    public void ToggleDisplay(bool show)
     {
-        
+        inventoryScreen.SetActive(show);
     }
 }
