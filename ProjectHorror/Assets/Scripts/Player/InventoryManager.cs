@@ -10,4 +10,5 @@ public class InventoryManager : MonoBehaviour
     {
         inventory.Add(item);
     }
+
 }
