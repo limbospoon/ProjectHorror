@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class InventoryWindow : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject windowObject;
+    public int windowID;
 
-    // Update is called once per frame
-    void Update()
+    public virtual void ToggleDisplay(bool show)
     {
-        
+        windowObject.SetActive(show);
     }
 }

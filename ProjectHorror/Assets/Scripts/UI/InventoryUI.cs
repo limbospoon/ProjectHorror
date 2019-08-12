@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InventoryUI : MonoBehaviour
+public class InventoryUI : InventoryWindow
 {
-    public GameObject inventoryScreen;
-
-    public void ToggleDisplay(bool show)
+    public override void ToggleDisplay(bool show)
     {
-        inventoryScreen.SetActive(show);
+        base.ToggleDisplay(show);
     }
 }

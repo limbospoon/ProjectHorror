@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class UIHandler : MonoBehaviour
 {
+    public InventoryWindow[] inventoryWindows = new InventoryWindow[4];
+
     public enum CurrentWindow
     {
         None,
@@ -19,24 +21,39 @@ public class UIHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-               
-    }
-
-    private void OpenWindow(string windowName)
-    {
-        switch(windowName)
+        switch(currentWindow)
         {
-            case "None":
+            case CurrentWindow.None:
                 {
-                    currentWindow = CurrentWindow.None;
+                    if(Input.GetKeyDown(KeyCode.I))
+                    {
+                        ToogleWindow(1, true);
+                        currentWindow = CurrentWindow.Inventory;
+                    }
                     break;
                 }
-            case "Inventory":
+            case CurrentWindow.Inventory:
                 {
-                    currentWindow = CurrentWindow.Inventory;
+                    if (Input.GetKeyDown(KeyCode.I))
+                    {
+                        ToogleWindow(1, false);
+                        currentWindow = CurrentWindow.None;
+                    }
                     break;
                 }
         }
+    }
 
+    private void ToogleWindow(int windowID, bool show)
+    {
+        foreach(InventoryWindow iw in inventoryWindows)
+        {
+            InventoryWindow iws = iw;
+            if(iws.windowID == windowID)
+            {
+                iws.ToggleDisplay(show);
+                break;
+            }
+        }
     }
 }
