@@ -80,12 +80,10 @@ public class HorrorCharacter : MonoBehaviour
     public void DisableControls()
     {
         GetComponent<Movement>().enabled    = false;
-        GetComponent<MouseLook>().enabled   = false;
     }
 
     public void EnableControls()
     {
         GetComponent<Movement>().enabled    = true;
-        GetComponent<MouseLook>().enabled   = true;
     }
 }
