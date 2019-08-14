@@ -18,7 +18,8 @@ public class HorrorCharacter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        GameManager.LockCursor();
+
         if(!GetComponent<InventoryManager>())
         {
             Debug.LogError("!!!No inventory manager found pls add");

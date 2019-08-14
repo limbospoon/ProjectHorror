@@ -55,5 +55,13 @@ public class UIHandler : MonoBehaviour
                 break;
             }
         }
+        if(show)
+        {
+            GameManager.UnLockCursor();
+        }
+        else
+        {
+            GameManager.LockCursor();
+        }
     }
 }

@@ -10,5 +10,13 @@ public class InventoryManager : MonoBehaviour
     {
         inventory.Add(item);
     }
-
+    
+    public void AddDummyItem()
+    {
+        InventoryItem i = new InventoryItem();
+        i.name = "Dummy";
+        i.count = 1;
+        i.canEquip = false;
+        Add(i);
+    }
 }
