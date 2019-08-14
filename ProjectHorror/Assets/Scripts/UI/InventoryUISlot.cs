@@ -1,18 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class InventoryUISlot : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public InventoryItem item;
+    public Text slotText;
+
+    private void Awake()
     {
-        
+        slotText = transform.GetChild(0).GetComponent<Text>();
+        slotText.text = " ";
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateSlot(InventoryItem item)
     {
-        
+        this.item = item;
+        slotText.text = this.item.name + " x" + this.item.count.ToString();
     }
 }
