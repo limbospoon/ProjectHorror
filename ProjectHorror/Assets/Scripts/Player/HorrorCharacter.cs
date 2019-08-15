@@ -15,6 +15,14 @@ public class HorrorCharacter : MonoBehaviour
     private InventoryManager inventoryManager;
     private Equipable equipable;
 
+    public InventoryManager InventoryManager
+    {
+        get
+        {
+            return inventoryManager;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -65,11 +73,6 @@ public class HorrorCharacter : MonoBehaviour
         }
 
         movement.Move(new Vector3(0, 0, Input.GetAxisRaw("Vertical")));
-    }
-
-    public void PickupItem(InventoryItem item)
-    {
-        inventoryManager.Add(item);
     }
 
     private void FixedUpdate()

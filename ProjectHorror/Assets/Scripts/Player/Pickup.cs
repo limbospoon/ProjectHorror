@@ -6,16 +6,25 @@ public class Pickup : Interactable
 {
     public InventoryItem item;
 
+    private HorrorCharacter horrorCharacter; 
+
     public override void Use()
     {
-        HorrorCharacter hc = GameObject.Find("Player").GetComponent<HorrorCharacter>();
-        PickupItem(hc);
-        
+        PickupItem();
     }
 
-    void PickupItem(HorrorCharacter horrorCharacter)
+    private void OnTriggerEnter(Collider other)
     {
-        horrorCharacter.PickupItem(item);
+        if(other.tag == "Player")
+        {
+            other.GetComponent<HorrorCharacter>().interactable = this;
+            horrorCharacter = other.GetComponent<HorrorCharacter>();
+        }
+    }
+
+    void PickupItem()
+    {
+        horrorCharacter.InventoryManager.Add(item);
         Destroy(this.gameObject, 0.05f);
     }
 }
