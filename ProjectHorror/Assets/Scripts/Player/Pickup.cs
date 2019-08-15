@@ -25,6 +25,7 @@ public class Pickup : Interactable
     void PickupItem()
     {
         horrorCharacter.InventoryManager.Add(item);
+        horrorCharacter.interactable = null;
         Destroy(this.gameObject, 0.05f);
     }
 }

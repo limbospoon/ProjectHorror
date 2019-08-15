@@ -8,11 +8,34 @@ public class InventoryManager : MonoBehaviour
 
     private int currentInventorySize = 0;
 
+    private void Start()
+    {
+        Debug.Log(inventory.Count);
+    }
+
     public void Add(InventoryItem item)
     {
-        inventory.Add(item);
+        if(inventory.Count > 0)
+        {
+            for (int i = 0; i < inventory.Count; i++)
+            {
+                if(inventory[i].name == item.name)
+                {
+                    InventoryItem tmpItem = inventory[i];
+                    tmpItem.count++;
+                    item = tmpItem;
+                    inventory[i] = item;
+                    break;
+                }
+            }
+        }
+        else
+        {
+            inventory.Add(item);
+        }
+
     }
-    
+
     public void AddDummyItem()
     {
         if(currentInventorySize < 20)
