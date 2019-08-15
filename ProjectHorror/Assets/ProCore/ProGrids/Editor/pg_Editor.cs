@@ -529,9 +529,9 @@ namespace ProGrids
 		{
 			pg_GridRenderer.Destroy();
 
-			SceneView.onSceneGUIDelegate -= OnSceneGUI;
+			SceneView.duringSceneGui -= OnSceneGUI;
 			EditorApplication.update -= Update;
-			EditorApplication.hierarchyWindowChanged -= HierarchyWindowChanged;
+			EditorApplication.hierarchyChanged -= HierarchyWindowChanged;
 
 			instance = null;
 

@@ -24,7 +24,6 @@ public class CineCamTrigger : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             playerRef = other.gameObject;
-            playerRef.GetComponent<HorrorCharacter>().ThirdPersonMode(spriteIndex);
             playerRef.GetComponent<HorrorCharacter>().DisableControls();
             cam.GetComponent<Camera>().enabled = true;
 
@@ -44,7 +43,6 @@ public class CineCamTrigger : MonoBehaviour
     public void TurnOffCam()
     {
         playerRef.SetActive(true);
-        playerRef.GetComponent<HorrorCharacter>().FirstPersonMode();
         playerRef.GetComponent<HorrorCharacter>().EnableControls();
         this.gameObject.SetActive(false);
     }
