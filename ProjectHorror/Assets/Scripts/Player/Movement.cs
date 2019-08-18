@@ -20,6 +20,11 @@ public class Movement : MonoBehaviour
         cc = GetComponent<CharacterController>();
     }
 
+    private void Update()
+    {
+        Move(new Vector3(0, 0, Input.GetAxisRaw("Vertical")));
+    }
+
     // Update is called once per frame
     public void Move(Vector3 direction)
     {

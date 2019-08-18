@@ -18,7 +18,17 @@ public class Pickup : Interactable
 
     public override void Use()
     {
-        PickupItem();
+        DisplayPickupWindow();
+        horrorCharacter.DisableControls();
+    }
+
+    void DisplayPickupWindow()
+    {
+        UIHandler uiHandler = GameObject.Find("UIManager").GetComponent<UIHandler>();
+        if(uiHandler)
+        {
+            uiHandler.ToogleWindow(0, true);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -39,7 +49,7 @@ public class Pickup : Interactable
         }
     }
 
-    void PickupItem()
+    public void PickupItem()
     {
         horrorCharacter.InventoryManager.Add(item);
         horrorCharacter.interactable = null;

@@ -5,11 +5,13 @@ using UnityEngine;
 public class UIHandler : MonoBehaviour
 {
     public UIWindow[] uiWindows = new UIWindow[4];
+    public List<Mesh> displayMeshes;
 
     public enum CurrentWindow
     {
         None,
-        Inventory
+        Inventory,
+        Pickup
     }
     public CurrentWindow currentWindow;
 
@@ -44,7 +46,7 @@ public class UIHandler : MonoBehaviour
         }
     }
 
-    private void ToogleWindow(int windowID, bool show)
+    public void ToogleWindow(int windowID, bool show)
     {
         foreach(UIWindow iw in uiWindows)
         {

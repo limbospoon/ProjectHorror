@@ -4,7 +4,7 @@ using UnityEngine;
 public class InventoryWindow : UIWindow
 {
     public List<InventoryUISlot> slots = new List<InventoryUISlot>();
-    public List<Mesh> displayMeshes;
+    public UIHandler uiHandler;
     public InventoryManager inventoryManager;
     public GameObject slotsParent;
     public GameObject inventorySlot;
@@ -30,6 +30,12 @@ public class InventoryWindow : UIWindow
 
     public override void ToggleDisplay(bool show)
     {
+        if(!show)
+        {
+            currentDisplayObject.mesh = null;
+            currentItem = new InventoryItem();
+        }
+
         windowObject.SetActive(show);
         itemMenu.SetActive(false);
         UpdateInventoryUI();
@@ -37,11 +43,11 @@ public class InventoryWindow : UIWindow
 
     void UpdateDisplayObject()
     {
-        for(int i = 0; i < displayMeshes.Count; i++)
+        for(int i = 0; i < uiHandler.displayMeshes.Count; i++)
         {
-            if(displayMeshes[i].name == currentItem.name)
+            if(uiHandler.displayMeshes[i].name == currentItem.name)
             {
-                currentDisplayObject.mesh = displayMeshes[i];
+                currentDisplayObject.mesh = uiHandler.displayMeshes[i];
                 break;
             }
         }

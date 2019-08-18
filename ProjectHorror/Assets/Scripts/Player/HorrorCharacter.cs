@@ -10,8 +10,7 @@ public class HorrorCharacter : MonoBehaviour
 {
     public Interactable interactable;
     public Transform attachPoint;
-
-    private Movement movement;
+    
     private InventoryManager inventoryManager;
     private Equipable equipable;
 
@@ -34,7 +33,6 @@ public class HorrorCharacter : MonoBehaviour
             return;
         }
         inventoryManager = GetComponent<InventoryManager>();
-        movement = GetComponent<Movement>();
     }
 
     void EquipItem()
@@ -67,12 +65,6 @@ public class HorrorCharacter : MonoBehaviour
                 interactable.GetComponent<Interactable>().Use();
             }
         }
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            EquipItem();
-        }
-
-        movement.Move(new Vector3(0, 0, Input.GetAxisRaw("Vertical")));
     }
 
     private void FixedUpdate()
@@ -82,7 +74,7 @@ public class HorrorCharacter : MonoBehaviour
 
     public void DisableControls()
     {
-        GetComponent<Movement>().enabled    = false;
+        GetComponent<Movement>().enabled = false;
     }
 
     public void EnableControls()
