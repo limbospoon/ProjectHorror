@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryWindow : MonoBehaviour
+public class InventoryWindow : UIWindow
 {
     public List<InventoryUISlot> slots = new List<InventoryUISlot>();
     public List<Mesh> displayMeshes;
@@ -10,8 +10,7 @@ public class InventoryWindow : MonoBehaviour
     public GameObject inventorySlot;
     public GameObject windowObject;
     public GameObject itemMenu;
-    public int windowID;
-
+  
     public InventoryItem currentItem;
     public MeshFilter currentDisplayObject;
 
@@ -29,7 +28,7 @@ public class InventoryWindow : MonoBehaviour
         }
     }
 
-    public void ToggleDisplay(bool show)
+    public override void ToggleDisplay(bool show)
     {
         windowObject.SetActive(show);
         itemMenu.SetActive(false);

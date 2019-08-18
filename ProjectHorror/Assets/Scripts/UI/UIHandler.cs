@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UIHandler : MonoBehaviour
 {
-    public InventoryWindow[] inventoryWindows = new InventoryWindow[4];
+    public UIWindow[] inventoryWindows = new UIWindow[4];
 
     public enum CurrentWindow
     {
@@ -46,9 +46,9 @@ public class UIHandler : MonoBehaviour
 
     private void ToogleWindow(int windowID, bool show)
     {
-        foreach(InventoryWindow iw in inventoryWindows)
+        foreach(UIWindow iw in inventoryWindows)
         {
-            InventoryWindow iws = iw;
+            UIWindow iws = iw;
             if(iws.windowID == windowID)
             {
                 iws.ToggleDisplay(show);
@@ -63,5 +63,15 @@ public class UIHandler : MonoBehaviour
         {
             GameManager.LockCursor();
         }
+    }
+}
+
+public class UIWindow : MonoBehaviour
+{
+    public int windowID;
+
+    public virtual void ToggleDisplay(bool show)
+    {
+
     }
 }
