@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UIHandler : MonoBehaviour
 {
-    public UIWindow[] inventoryWindows = new UIWindow[4];
+    public UIWindow[] uiWindows = new UIWindow[4];
 
     public enum CurrentWindow
     {
@@ -46,7 +46,7 @@ public class UIHandler : MonoBehaviour
 
     private void ToogleWindow(int windowID, bool show)
     {
-        foreach(UIWindow iw in inventoryWindows)
+        foreach(UIWindow iw in uiWindows)
         {
             UIWindow iws = iw;
             if(iws.windowID == windowID)
