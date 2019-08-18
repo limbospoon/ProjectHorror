@@ -17,6 +17,7 @@ public class InventoryManager : MonoBehaviour
     {
         if(inventory.Count > 0)
         {
+            bool haveItem = false;
             for (int i = 0; i < inventory.Count; i++)
             {
                 if(inventory[i].name == item.name)
@@ -25,8 +26,14 @@ public class InventoryManager : MonoBehaviour
                     tmpItem.count++;
                     item = tmpItem;
                     inventory[i] = item;
+                    haveItem = true;
                     break;
                 }
+            }
+
+            if(!haveItem)
+            {
+                inventory.Add(item);
             }
         }
         else

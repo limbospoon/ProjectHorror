@@ -22,6 +22,15 @@ public class Pickup : Interactable
         }
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            other.GetComponent<HorrorCharacter>().interactable = null;
+            horrorCharacter = null;
+        }
+    }
+
     void PickupItem()
     {
         horrorCharacter.InventoryManager.Add(item);
