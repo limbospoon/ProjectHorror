@@ -10,7 +10,7 @@ public class InventoryManager : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log(inventory.Count);
+        //Debug.Log(inventory.Count);
     }
 
     public void Add(InventoryItem item)

@@ -24,7 +24,7 @@ public class InventoryUISlot : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if(item.name != " ")
+        if(item.name != "")
         {
             inventoryWindow.SetCurrentItem(item);
         }

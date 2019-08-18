@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.UI;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class InventoryWindow : MonoBehaviour
@@ -11,6 +9,7 @@ public class InventoryWindow : MonoBehaviour
     public GameObject slotsParent;
     public GameObject inventorySlot;
     public GameObject windowObject;
+    public GameObject itemMenu;
     public int windowID;
 
     public InventoryItem currentItem;
@@ -33,6 +32,7 @@ public class InventoryWindow : MonoBehaviour
     public void ToggleDisplay(bool show)
     {
         windowObject.SetActive(show);
+        itemMenu.SetActive(false);
         UpdateInventoryUI();
     }
 
@@ -51,6 +51,7 @@ public class InventoryWindow : MonoBehaviour
     public void SetCurrentItem(InventoryItem item)
     {
         currentItem = item;
+        itemMenu.SetActive(true);
         UpdateDisplayObject();
     }
 

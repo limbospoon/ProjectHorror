@@ -5,4 +5,5 @@ public struct InventoryItem
     public int count;
     public bool canEquip;
     public Equipable equipable;
+    public Item itemClass;
 }

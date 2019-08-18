@@ -6,7 +6,15 @@ public class Pickup : Interactable
 {
     public InventoryItem item;
 
-    private HorrorCharacter horrorCharacter; 
+    private HorrorCharacter horrorCharacter;
+
+    private void Start()
+    {
+        item.name = "Bath";
+        item.count = 1;
+        item.canEquip = false;
+        item.itemClass = new CandleItem();
+    }
 
     public override void Use()
     {
