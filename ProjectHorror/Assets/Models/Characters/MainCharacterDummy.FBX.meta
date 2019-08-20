@@ -21,7 +21,12 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
+      improve retargeting quality.\n\t'HumanCatRigLeftLegLeftFoot' has scale animation
+      that will be discarded.\n\t'HumanCatRigRightArmRightLowerArm' has translation
+      animation that will be discarded.\n\t'HumanCatRigRightArmRightHand' has translation
+      animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -66,7 +71,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.8
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -103,8 +108,283 @@ ModelImporter:
   copyAvatar: 0
   humanDescription:
     serializedVersion: 3
-    human: []
-    skeleton: []
+    human:
+    - boneName: HumanCatRigHipBoneMain
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: HumanCatRigLeftLegLeftThighBone
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: HumanCatRigRightLegRightThighBone
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: HumanCatRigLeftLegLeftCalfBone
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: HumanCatRigRightLegRightCalfBone
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: HumanCatRigLeftLegLeftFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: HumanCatRigRightLegRightFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: HumanCatRigSpineLower2LowerSpine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: HumanCatRigSpineLower2UpperSpine
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: HumanCatRigNeckBone
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: HumanCatRigHead
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: HumanCatRigLeftArmLeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: HumanCatRigRightArmRightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: HumanCatRigLeftArmLeftUpperArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: HumanCatRigRightArmRightUpperArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: HumanCatRigLeftArmLeftLowerArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: HumanCatRigRightArmRightLowerArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: HumanCatRigLeftArmLeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: HumanCatRigRightArmRightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: HumanCatRigRibCage
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: MainCharacterDummy(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MaleBody
+      parentName: MainCharacterDummy(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 1.060302e-24, y: 0.7071068, z: 0.7071068, w: 8.659561e-17}
+      scale: {x: 0.02199423, y: 0.02199423, z: 0.02199422}
+    - name: MaleHead
+      parentName: MainCharacterDummy(Clone)
+      position: {x: 0.035671618, y: 3.2450318, z: 0.18540083}
+      rotation: {x: 1.060302e-24, y: 0.7071068, z: 0.7071068, w: 8.659561e-17}
+      scale: {x: 0.01820645, y: 0.01820645, z: 0.01820645}
+    - name: HumanCatRigHipBoneMain
+      parentName: MainCharacterDummy(Clone)
+      position: {x: -0.00018317712, y: 2.0580945, z: 0.0000009250872}
+      rotation: {x: 0.50000024, y: -0.5, z: -0.49999982, w: 0.49999994}
+      scale: {x: 0.009999999, y: 0.009999999, z: 0.009999999}
+    - name: HumanCatRigLeftLegLeftThighBone
+      parentName: HumanCatRigHipBoneMain
+      position: {x: 0.7506103, y: -3.9457207, z: 16.806152}
+      rotation: {x: -0.028678298, y: 0.9927714, z: 0.11654417, w: 0.00026598573}
+      scale: {x: 1.0000026, y: 0.99999803, z: 1.0000004}
+    - name: HumanCatRigLeftLegLeftCalfBone
+      parentName: HumanCatRigLeftLegLeftThighBone
+      position: {x: -106.7752, y: -0.0003780365, z: 0.00066223147}
+      rotation: {x: -0.16917978, y: -0.0693328, z: 0.15072118, w: 0.9715216}
+      scale: {x: 1.0000273, y: 0.999976, z: 0.9999969}
+    - name: HumanCatRigLeftLegLeftFoot
+      parentName: HumanCatRigLeftLegLeftCalfBone
+      position: {x: -97.957756, y: 0, z: 0}
+      rotation: {x: 0.056841187, y: 0.14148521, z: -0.77420473, w: 0.61429477}
+      scale: {x: 1.000054, y: 0.99994427, z: 1.0000023}
+    - name: HumanCatRigSpineLower2LowerSpine
+      parentName: HumanCatRigHipBoneMain
+      position: {x: -0, y: -12.913993, z: 0.0000019252304}
+      rotation: {x: 0.00000008940697, y: -0.00000011920929, z: -0.093643785, w: 0.9956058}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1}
+    - name: HumanCatRigSpineLower2UpperSpine
+      parentName: HumanCatRigSpineLower2LowerSpine
+      position: {x: -39.145546, y: 0, z: 0.000000011920928}
+      rotation: {x: -0.000000044703484, y: -0.000000014901161, z: 0.011190668, w: 0.9999374}
+      scale: {x: 1.0000001, y: 1, z: 0.9999999}
+    - name: HumanCatRigRibCage
+      parentName: HumanCatRigSpineLower2UpperSpine
+      position: {x: -33.984127, y: 0.0000030517576, z: 0.000000047683713}
+      rotation: {x: -0.000000059604645, y: 0.00000013411045, z: 0.082496405, w: 0.9965914}
+      scale: {x: 0.9999999, y: 0.9999998, z: 0.9999999}
+    - name: HumanCatRigLeftArmLeftShoulder
+      parentName: HumanCatRigRibCage
+      position: {x: -27.061625, y: 3.4718864, z: 20.380808}
+      rotation: {x: 0.0024932704, y: 0.7085656, z: 0.0025036493, w: 0.70563614}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1.0000006}
+    - name: HumanCatRigLeftArmLeftUpperArm
+      parentName: HumanCatRigLeftArmLeftShoulder
+      position: {x: -16.083744, y: 0, z: 0}
+      rotation: {x: 0.06599996, y: 0.0070418995, z: -0.0027155064, w: 0.99779105}
+      scale: {x: 1.0000004, y: 1.0000007, z: 1.0000004}
+    - name: HumanCatRigLeftArmLeftLowerArm
+      parentName: HumanCatRigLeftArmLeftUpperArm
+      position: {x: -67.225174, y: 0, z: -0.00000076293946}
+      rotation: {x: 0.011267272, y: -0.011935962, z: -0.03153215, w: 0.999368}
+      scale: {x: 0.99999964, y: 0.99999946, z: 0.99999976}
+    - name: HumanCatRigLeftArmLeftHand
+      parentName: HumanCatRigLeftArmLeftLowerArm
+      position: {x: -59.282692, y: 0.0000061035166, z: 0}
+      rotation: {x: -0.031938367, y: 0.12594442, z: 0.24607271, w: 0.96050304}
+      scale: {x: 1.0000024, y: 0.9999972, z: 1}
+    - name: HumanCatRigRightArmRightShoulder
+      parentName: HumanCatRigRibCage
+      position: {x: -27.061625, y: 3.4718874, z: -20.380808}
+      rotation: {x: 0.0024931862, y: 0.7085659, z: -0.002503669, w: -0.7056358}
+      scale: {x: 1.0000007, y: 1, z: 0.9999999}
+    - name: HumanCatRigRightArmRightUpperArm
+      parentName: HumanCatRigRightArmRightShoulder
+      position: {x: -16.083744, y: 0, z: 0.000024414067}
+      rotation: {x: -0.06596613, y: -0.0070389784, z: -0.0027576876, w: 0.9977932}
+      scale: {x: 1.0000004, y: 1.0000007, z: 1.000001}
+    - name: HumanCatRigRightArmRightLowerArm
+      parentName: HumanCatRigRightArmRightUpperArm
+      position: {x: -67.22519, y: 0.0000061035166, z: 0.0000061035166}
+      rotation: {x: -0.011267506, y: 0.011935791, z: -0.031532984, w: 0.99936795}
+      scale: {x: 0.99999994, y: 1.0000004, z: 0.99999976}
+    - name: HumanCatRigRightArmRightHand
+      parentName: HumanCatRigRightArmRightLowerArm
+      position: {x: -59.282692, y: 0, z: 0}
+      rotation: {x: 0.03194119, y: -0.12594382, z: 0.24607559, w: 0.9605024}
+      scale: {x: 0.99999785, y: 1.0000026, z: 1.0000001}
+    - name: HumanCatRigNeckBone
+      parentName: HumanCatRigRibCage
+      position: {x: -32.2763, y: -2.491453, z: 0.00000085830715}
+      rotation: {x: 0.006376621, y: -0.0014739163, z: 0.14835548, w: -0.98891246}
+      scale: {x: 1.000001, y: 1.0000014, z: 1.0000012}
+    - name: HumanCatRigHead
+      parentName: HumanCatRigNeckBone
+      position: {x: -13.371169, y: 0, z: 0}
+      rotation: {x: -0.019320518, y: -0.00046813488, z: -0.14836204, w: -0.9887443}
+      scale: {x: 0.9999994, y: 0.9999995, z: 0.9999999}
+    - name: HumanCatRigRightLegRightThighBone
+      parentName: HumanCatRigHipBoneMain
+      position: {x: 0.000024414067, y: -3.942887, z: -16.389929}
+      rotation: {x: -0.02887544, y: 0.99277604, z: -0.11640984, w: -0.0032878816}
+      scale: {x: 1.0000015, y: 0.99999964, z: 1.0000005}
+    - name: HumanCatRigRightLegRightCalfBone
+      parentName: HumanCatRigRightLegRightThighBone
+      position: {x: -107.53017, y: -0.00044555665, z: -0.0006641388}
+      rotation: {x: 0.16904928, y: 0.06537901, z: 0.15222795, w: 0.9715836}
+      scale: {x: 1.0000019, y: 0.9999924, z: 1.0000061}
+    - name: HumanCatRigRightLegRightFoot
+      parentName: HumanCatRigRightLegRightCalfBone
+      position: {x: -97.95768, y: 0.0000015258793, z: 0.0000015258793}
+      rotation: {x: -0.05783078, y: -0.14086157, z: -0.774503, w: 0.6139697}
+      scale: {x: 1.0000094, y: 0.9999881, z: 1.0000019}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -112,7 +392,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 0.8
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 1
